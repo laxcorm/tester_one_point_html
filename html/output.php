@@ -11,7 +11,7 @@
             let timeObj = new Date();
 
             function timer(left) {
-                
+
                 if (typeof(timer.count) == 'undefined') {
                     timer.count = left;
                 }
@@ -45,37 +45,14 @@
         <div class="col-12">
             <form action="/" method="get">
                 <div class="list-group mt-5">
-<?php
-for($i=1; $i<4;++$i){
-    echo '<label class="list-group-item"><input class="form-check-input me-1" type="radio" value="answer_'.$i.'" name="answer" '. (${'answer_'.$i} ?? ''). '>'.   $test["answer_$i"] .'</label>';
-}?>
+                    <?php
+                    for ($i = 1; $i < 4; ++$i) {
+                        echo '<label class="list-group-item"><input class="form-check-input me-1" type="radio" value="answer_' . $i . '" name="answer" ' . (${'answer_' . $i} ?? '') . '>' .   $test["answer_$i"] . '</label>';
+                    } ?>
 
-
-
-
-                    <!-- <label class="list-group-item">
-                        <input class="form-check-input me-1" type="radio" value="answer_1" name="answer" <?php //echo $answer_1 ?? ''; ?>>
-                        <?php //echo $test['answer_1']; ?>
-                    </label>
-                    <label class="list-group-item">
-                        <input class="form-check-input me-1" type="radio" value="answer_2" name="answer" <?php //echo $answer_2 ?? ''; ?>>
-                        <?php //echo $test['answer_2']; ?>
-                    </label>
-                    <label class="list-group-item">
-                        <input class="form-check-input me-1" type="radio" value="answer_3" name="answer" <?php //echo $answer_3 ?? ''; ?>>
-                        <?php //echo $test['answer_3']; ?>
-                    </label> -->
                 </div>
                 <div class="row mt-5">
-                    <div class="col-5"></div>
-                    <?php if ($id > 1) : ?>
-                        <button class="col-2 btn btn-info" name="id" value=<?php echo  -$id; ?>><?php echo ($id - 1); ?></button>
-                    <?php else : ?>
-                        <div class="col-2 border border-danger"></div>
-                    <?php endif; ?>
-                    <div class="col-2 text-info text-center align-bottom"><?php echo $id; ?></div>
-
-                    <button class="col-2 btn btn-info" name="id" value=<?php echo  $id; ?>><?php echo ($count != $id) ?  $id + 1 : "Summ up"; ?></button>
+                    <?php require('id_walk.php'); ?>
                     <!-- <div class="col-2"></div> -->
                 </div>
             </form>

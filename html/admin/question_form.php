@@ -14,29 +14,7 @@ echo   '<div class="input-group mt-2">
 <input type="text" autocomplete="off" name="answer_'.$i.'" class="form-control" value="' . ($test["answer_$i"] ?? "") . '"></div>';
 }
 ?>
-        <!-- <div class="input-group mt-3">
-            <div class="input-group-text">
-                <input type="radio" class="form-check-input mt-0" name="answer" value="answer_1" <?php //echo $answer_1 ?? ''; ?>>
-            </div>
-            <input type="text" autocomplete="off" name="answer_1" class="form-control" value="<?php //echo $test['answer_1'] ?? ''; ?>">
-        </div>
-
-
-        <div class="input-group mt-2">
-            <div class="input-group-text">
-                <input type="radio" class="form-check-input mt-0" name="answer" value="answer_2" <?php //echo $answer_2 ?? ''; ?>>
-            </div>
-            <input type="text" autocomplete="off" name="answer_2" class="form-control" value="<?php //echo $test['answer_2'] ?? ''; ?>">
-        </div>
-
-
-        <div class="input-group mt-2">
-            <div class="input-group-text">
-                <input type="radio" class="form-check-input mt-0" name="answer" value="answer_3" <?php //echo $answer_3 ?? ''; ?>>
-            </div>
-            <input type="text" autocomplete="off" name="answer_3" class="form-control" value="<?php //echo $test['answer_3'] ?? ''; ?>">
-        </div> -->
-
+     
         <div class="row mt-3">
             <div class="col-1"></div>
             <?php if ($id <= $count) : ?>
@@ -46,8 +24,7 @@ echo   '<div class="input-group mt-2">
             <?php endif ?>
 
             <div class="col-2"></div>
-            <button class="btn btn-success col-2" type="submit" name='id' value="<?php echo $id  /*select - выводить id*/
-                                                                                    ?>">Save</button>
+            <button class="btn btn-success col-2" type="submit" name='id' value="<?php echo $id ?>">Save</button>
             <div class="col-2"></div>
             <?php if ($id <= $count) : ?>
                 <a href="delete.php?id=<?php echo $id ?>" class="btn btn-danger col-2" role="button">Delete</a>
@@ -56,19 +33,8 @@ echo   '<div class="input-group mt-2">
         </div>
     </form>
 
-    <form action="/" class="row mt-3">
-        <div class="col-5"></div>
-        <?php if ($id > 1) : ?>
-            <button class="col-2 btn btn-info" name="id" value=<?php echo  -$id; ?>><?php echo $page = $id - 1; ?></button>
-        <?php else : ?>
-            <div class="col-2"></div>
-        <?php endif; ?>
-        <div class="col-2 text-info text-center align-bottom"><?php echo $id; ?></div>
-        <?php if ($id < $count) : ?>
-            <button class="col-2 btn btn-info" name="id" value=<?php echo  $id; ?>><?php echo $page = $id + 1; ?></button>
-        <?php else : ?>
-            <div class="col-2"></div>
-        <?php endif; ?>
+    <form action="/" class="row mt-3" method="get">
+        <?php require('id_walk.php'); ?>
     </form>
 
     <div class="row mt-3">

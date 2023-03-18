@@ -3,8 +3,6 @@
 // $user = 'myuser';
 // $password = 'aaaa';
 
-
-
 $dsn = 'mysql:dbname=tests;host=localhost';
 $user = 'root';
 $password = 'usbw';

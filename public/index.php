@@ -1,29 +1,4 @@
 <?php
-/* if (($_POST['login'] ?? false) || ($_POST['password'] ?? false)) {
-    require('auth.php');
-}
-require('../user/user.php');
-require('../admin/admin.php');
-if($_SESSION['authorized'] === true){  
-}
-require('../tags/test.php'); */
-/*
-if(@$_GET['del']) echo $_GET['del']."deleted";
-if(($name = trim($_SERVER['REQUEST_URI'], "/")))
-{
- if(preg_match('{delete/id+}', $name)){
-    // echo "eyeys";
-    require("../admin/delete.php");
- }
-
-$file = ($_SESSION['admin']) ? "../admin/$name.php" : "../user/$name.php";
-
-(!file_exists($file)) ?? require($file);
-}
-*/
-?><?php
-    // header('Cache-Control: no-store');
-    // header('Cache-Control: no-cache, no-store, must-revalidate');
     session_start();
     require_once('../db/mysql.php');
     require_once('../session/count.php');
@@ -33,7 +8,7 @@ $file = ($_SESSION['admin']) ? "../admin/$name.php" : "../user/$name.php";
 <!doctype html>
 
 <head>
-    <!-- Required meta tags -->
+ 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
