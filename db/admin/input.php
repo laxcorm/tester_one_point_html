@@ -3,8 +3,7 @@ session_start();
 if(!isset($_SESSION['admin'])){
     die();
 }
- 
-require('../db/mysql.php');
+ require_once('../mysql.php');
 $id = $_POST['id'];
 
 if(in_array('', $_POST)){

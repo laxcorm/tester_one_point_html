@@ -16,7 +16,7 @@
                     timer.count = left;
                 }
                 if (timer.count <= 0) {
-                    location.replace('final.php');
+                    location.replace('user/final.php');
                     return false;
                 }
                 timer.count -= 1000;
@@ -52,7 +52,7 @@
 
                 </div>
                 <div class="row mt-5">
-                    <?php require('id_walk.php'); ?>
+                    <?php require_once('public/id_walk.php'); ?>
                     <!-- <div class="col-2"></div> -->
                 </div>
             </form>

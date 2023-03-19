@@ -1,12 +1,11 @@
 <?php
-session_start();
-require('../db/mysql.php');
-require('../session/count.php');
+(session_status() == PHP_SESSION_ACTIVE) ?: session_start();
+require_once(dirname(__DIR__).'/db/mysql.php');
+require_once(dirname(__DIR__).'/session/count.php');
 
 function fromArray($array){
     return $array[0];
 }
-
 $query = 'SELECT answer FROM tests';
 $stmt = $db->prepare($query);
 $stmt->execute();

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('../db/mysql.php');
+require_once('../mysql.php');
 $id = $_GET['id'];
 $query = 'DELETE FROM tests WHERE id=:id';
 $stmt = $db->prepare($query);

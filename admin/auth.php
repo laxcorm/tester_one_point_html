@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('../db/mysql.php');
+require_once('../db/mysql.php');
 
 $post_password = $_POST['password'];
 $post_login = $_POST['login'];
