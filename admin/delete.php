@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once('../mysql.php');
+require_once('lock_guest.php');
+require_once('../db/mysql.php');
 $id = $_GET['id'];
 $query = 'DELETE FROM tests WHERE id=:id';
 $stmt = $db->prepare($query);

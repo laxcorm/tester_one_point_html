@@ -1,9 +1,10 @@
 <?php
 session_start();
-require_once('../db/mysql.php');
-require_once('../session/count.php');
-require_once('../public/id.php');
-require_once('../db/select.php');
+require_once('common/title.php');
+require_once('db/mysql.php');
+require_once('session/count.php');
+require_once('common/id.php');
+require_once('db/select.php');
 ?>
 <!doctype html>
 <head>
@@ -13,7 +14,7 @@ require_once('../db/select.php');
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Layout</title>
+    <title><?php echo $title ?></title>
 </head>
 <div class="container">
     <div class="row mt-3">
@@ -26,14 +27,14 @@ require_once('../db/select.php');
             unset($_SESSION['error']);
         }
         if (isset($_SESSION['admin'])) {
-            require_once('../admin/admin.php');
+            require_once('admin/admin.php');
         } elseif (isset($_SESSION['questions'])) {
-            require_once('../user/next.php');
-            require_once('../user/output.php');
+            require_once('user/next.php');
+            require_once('user/output.php');
         } elseif (isset($_SESSION['result'])) {
-            require_once('../user/result.php');
+            require_once('user/result.php');
         } else {
-            require_once('../public/intro.php');
+            require_once('common/intro.php');
         }
         ?>
     </div>

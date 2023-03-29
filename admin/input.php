@@ -1,9 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION['admin'])){
-    die();
-}
- require_once('../mysql.php');
+require_once('lock_guest.php');
+ require_once('../db/mysql.php');
 $id = $_POST['id'];
 
 if(in_array('', $_POST)){

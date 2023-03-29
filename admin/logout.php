@@ -1,9 +1,5 @@
 <?php
 session_start();
-if(!isset($_SESSION['admin'])){
-    die();
-}
-$_SESSION = [];
-unset($_COOKIE[session_name()]);
-session_destroy();
+require_once('lock_guest.php');
+require_once('../session/destroy.php');
 header("Location: http://" . $_SERVER['HTTP_HOST']);

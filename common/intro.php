@@ -2,12 +2,12 @@
 if ($_SESSION['error'] ?? false) { ?>
   <div class="alert alert-danger row" role="alert">
     Input data is not correct
-  </div> 
-<?php 
-unset($_SESSION['error']);
-} 
+  </div>
+<?php
+  unset($_SESSION['error']);
+}
 ?>
-<form action="admin/auth.php" class="row bg-dark p-3 mb-5" method="post">
+<form action="common/auth.php" class="row bg-dark p-3 mb-5" method="post">
   <div class="col-1"></div>
   <div class="col-4">
     <input type="text" class="form-control" placeholder="Login" name="login">
@@ -15,7 +15,7 @@ unset($_SESSION['error']);
   <div class="col-4">
     <input type="password" class="form-control" placeholder="Password" name="password">
   </div>
-  <button class="col-2 btn btn-warning text-dark" type="submit">Submit</button>
+  <button class="col-2 btn btn-warning text-dark" type="submit">Log in</button>
   <div class="col-1"></div>
 </form>
 

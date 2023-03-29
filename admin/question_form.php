@@ -1,7 +1,9 @@
-<?php $root = dirname(__DIR__) . "/"; ?>
+<?php
+require_once('lock_guest.php');
+?>
 <div class="col"><?php echo "<b>Number of questions - $count</b>" ?></div>
 <div class="col-6 mt-3">
-    <form method="post" action="<?php echo $root; ?>db/admin/input.php">
+    <form method="post" action="admin/input.php">
 
         <div class="mb-4">
             <textarea class="form-control" name="questions" row mt-3s="3"><?php echo $test['questions'] ?? '' ?></textarea>
@@ -27,20 +29,20 @@
             <div class="col-2"></div>
             <button class="btn btn-success col-2" type="submit" name='id' value="<?php echo $id ?>">Save</button>
             <div class="col-2"></div>
+            
             <?php if ($id <= $count) : ?>
-                <a href="<?php echo $root; ?>db/admin/delete.php?id=<?php echo $id ?>" class="btn btn-danger col-2" role="button">Delete</a>
+                <a href="admin/delete.php?id=<?php echo $id ?>" class="btn btn-danger col-2" role="button">Delete</a>
             <?php endif ?>
             <div class="col-1"></div>
         </div>
     </form>
 
     <form action="/" class="row mt-3" method="get">
-        <?php require_once('../common/id_walk.php'); ?>
+        <?php require_once('common/id_walk.php'); ?>
     </form>
-
     <div class="row mt-3">
         <div class="col-9"></div>
-        <a href="<?php echo $root; ?>admin/logout.php" class="col-2 btn btn-secondary" role="button">Logout</a>
+        <a href="admin/logout.php" class="col-2 btn btn-secondary" role="button">Logout</a>
         <div class="col"></div>
     </div>
 </div>

@@ -4,30 +4,7 @@
         <div class="col-8"></div>
         <div class="col-2">Time left:</div>
         <div class="col-2" id="timer"></div>
-        <script type="text/javascript">
-            let checkout = <?php echo $_SESSION['checkout']; ?>;
-            let current = <?php echo (time() * 1000); ?>;
-            let left = checkout - current;
-            let timeObj = new Date();
-
-            function timer(left) {
-
-                if (typeof(timer.count) == 'undefined') {
-                    timer.count = left;
-                }
-                if (timer.count <= 0) {
-                    location.replace('user/final.php');
-                    return false;
-                }
-                timer.count -= 1000;
-                timeObj.setTime(timer.count);
-                document.getElementById('timer').innerHTML = timeObj.toLocaleString([], {
-                    minute: '2-digit',
-                    second: '2-digit'
-                });
-            }
-            setInterval(timer, 1000, left);
-        </script>
+        <?php require_once('counter.php') ?>
     </div>
     <div class="row mt-5">
         <?php if ($noanswer ?? false) : ?>
@@ -52,8 +29,7 @@
 
                 </div>
                 <div class="row mt-5">
-                    <?php require_once('public/id_walk.php'); ?>
-                    <!-- <div class="col-2"></div> -->
+                    <?php require_once('common/id_walk.php'); ?>
                 </div>
             </form>
         </div>

@@ -3,3 +3,4 @@ session_start();
 $_SESSION = [];
 unset($_COOKIE[session_name()]);
 session_destroy();
+echo "just for test";
