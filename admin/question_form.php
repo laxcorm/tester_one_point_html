@@ -37,7 +37,7 @@ require_once('lock_guest.php');
         </div>
     </form>
 
-    <form action="/" class="row mt-3" method="get">
+    <form action="/" class="row mt-3" method="post">
         <?php require_once('common/id_walk.php'); ?>
     </form>
     <div class="row mt-3">

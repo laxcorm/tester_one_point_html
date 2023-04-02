@@ -2,7 +2,7 @@
 function button($id = 1, $title = 1)
 {
     if(isset($_SESSION['questions'])) {$title = "Save/to $title";}
-    return '<button type="submit" class="col-3 btn btn-info" name="id" value=' . $id . '>' . $title . '</button>';
+    return '<button type="submit" class="col-3 btn btn-info fs-8" name="id" value=' . $id . '>' . $title . '</button>';
 }
 
 function buttonOrBlock($proviso, $id, $title)

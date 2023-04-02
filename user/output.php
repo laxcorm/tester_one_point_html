@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="col-12">
-            <form action="/" method="get">
+            <form action="/" method="post">
                 <div class="list-group mt-5">
                     <?php
                     for ($i = 1; $i < 4; ++$i) {

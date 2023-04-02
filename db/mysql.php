@@ -1,11 +1,11 @@
 <?php
-// $dsn = 'mysql:dbname=tests;host=localhost';
-// $user = 'myuser';
-// $password = 'aaaa';
-
 $dsn = 'mysql:dbname=tests;host=localhost';
-$user = 'root';
-$password = 'usbw';
+$user = 'myuser';
+$password = 'aaaa';
+
+// $dsn = 'mysql:dbname=tests;host=localhost';
+// $user = 'root';
+// $password = 'usbw';
 
 try {
     $db = new PDO($dsn, $user, $password);

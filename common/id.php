@@ -1,12 +1,12 @@
 <?php
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    if (isset($_SESSION['questions']) ? ((count($_SESSION['questions'])) < $id + 1) && (!isset($_GET['answer'])) : false)
+if (isset($_POST['id'])) {
+    $id = $_POST['id'];
+    if (isset($_SESSION['questions']) ? ((count($_SESSION['questions'])) < $id + 1) && (!isset($_POST['answer'])) : false)
      {
         $noanswer = true;
     } else {
-        if (isset($_GET['answer'])) {
-            $_SESSION['questions'][abs($id)] = $_GET['answer']; //зачем прописать abs($id)
+        if (isset($_POST['answer'])) {
+            $_SESSION['questions'][abs($id)] = $_POST['answer']; //зачем прописать abs($id)
         }
       $id =  ($id == $count +1) ? $id : abs($id + 1);
       }
