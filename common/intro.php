@@ -15,14 +15,14 @@ if ($_SESSION['error'] ?? false) { ?>
   <div class="col-4">
     <input type="password" class="form-control" placeholder="Password" name="password">
   </div>
-  <button class="col-2 btn btn-admin text-dark" type="submit">Log in</button>
+  <div class="col-2"><button class="form-control btn btn-admin text-dark" type="submit">Log in</button></div>
   <div class="col-1"></div>
 </form>
 
 <div class="row">
   <div class="card text-center mt-5 border-0">
-    <div class="card-body col">
-      <a href="user/start.php" class="btn btn-start">Start test</a>
+    <div class="card-body">
+      <a href="user/start.php" class="col-2 btn btn-start">Start test</a>
     </div>
   </div>
 </div>

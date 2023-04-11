@@ -10,6 +10,13 @@
   content: "";
 }
 
+.link-cher {
+  color: #6d0404;
+}
+.link-cher:hover, .link-cher:focus {
+  color: #570303;
+}
+
 .link-start {
   color: #2ddd0a;
 }
@@ -432,6 +439,10 @@
 
 .border-start-0 {
   border-left: 0 !important;
+}
+
+.border-cher {
+  border-color: #6d0404 !important;
 }
 
 .border-start {
@@ -1176,6 +1187,14 @@
   font-size: 1rem !important;
 }
 
+.fs-7 {
+  font-size: 0.75rem !important;
+}
+
+.fs-8 {
+  font-size: 0.5rem !important;
+}
+
 .fst-italic {
   font-style: italic !important;
 }
@@ -1271,6 +1290,10 @@
 }
 
 /* rtl:end:remove */
+.text-cher {
+  color: #6d0404 !important;
+}
+
 .text-start {
   color: #2ddd0a !important;
 }
@@ -1333,6 +1356,10 @@
 
 .text-reset {
   color: inherit !important;
+}
+
+.bg-cher {
+  background-color: #6d0404 !important;
 }
 
 .bg-start {

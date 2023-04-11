@@ -6,6 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+  --bs-cherry: #6d0404;
   --bs-myel: #e5fd0d;
   --bs-mygreen: #2ddd0a;
   --bs-blue: #0d6efd;
@@ -21,6 +22,7 @@
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
+  --bs-cher: #6d0404;
   --bs-start: #2ddd0a;
   --bs-admin: #e5fd0d;
   --bs-primary: #0d6efd;
@@ -527,6 +529,23 @@ progress {
   .display-6 {
     font-size: 2.5rem;
   }
+}
+
+.display-7 {
+  font-size: calc(1.275rem + 0.3vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .display-7 {
+    font-size: 1.5rem;
+  }
+}
+
+.display-8 {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 .list-unstyled {
@@ -2768,6 +2787,36 @@ textarea.form-control-lg {
   opacity: 0.65;
 }
 
+.btn-cher {
+  color: #fff;
+  background-color: #6d0404;
+  border-color: #6d0404;
+}
+.btn-cher:hover {
+  color: #fff;
+  background-color: #5d0303;
+  border-color: #570303;
+}
+.btn-check:focus + .btn-cher, .btn-cher:focus {
+  color: #fff;
+  background-color: #5d0303;
+  border-color: #570303;
+  box-shadow: 0 0 0 0.25rem rgba(131, 42, 42, 0.5);
+}
+.btn-check:checked + .btn-cher, .btn-check:active + .btn-cher, .btn-cher:active, .btn-cher.active, .show > .btn-cher.dropdown-toggle {
+  color: #fff;
+  background-color: #570303;
+  border-color: #520303;
+}
+.btn-check:checked + .btn-cher:focus, .btn-check:active + .btn-cher:focus, .btn-cher:active:focus, .btn-cher.active:focus, .show > .btn-cher.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(131, 42, 42, 0.5);
+}
+.btn-cher:disabled, .btn-cher.disabled {
+  color: #fff;
+  background-color: #6d0404;
+  border-color: #6d0404;
+}
+
 .btn-start {
   color: #000;
   background-color: #2ddd0a;
@@ -3066,6 +3115,31 @@ textarea.form-control-lg {
   color: #fff;
   background-color: #212529;
   border-color: #212529;
+}
+
+.btn-outline-cher {
+  color: #6d0404;
+  border-color: #6d0404;
+}
+.btn-outline-cher:hover {
+  color: #fff;
+  background-color: #6d0404;
+  border-color: #6d0404;
+}
+.btn-check:focus + .btn-outline-cher, .btn-outline-cher:focus {
+  box-shadow: 0 0 0 0.25rem rgba(109, 4, 4, 0.5);
+}
+.btn-check:checked + .btn-outline-cher, .btn-check:active + .btn-outline-cher, .btn-outline-cher:active, .btn-outline-cher.active, .btn-outline-cher.dropdown-toggle.show {
+  color: #fff;
+  background-color: #6d0404;
+  border-color: #6d0404;
+}
+.btn-check:checked + .btn-outline-cher:focus, .btn-check:active + .btn-outline-cher:focus, .btn-outline-cher:active:focus, .btn-outline-cher.active:focus, .btn-outline-cher.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem rgba(109, 4, 4, 0.5);
+}
+.btn-outline-cher:disabled, .btn-outline-cher.disabled {
+  color: #6d0404;
+  background-color: transparent;
 }
 
 .btn-outline-start {
@@ -4607,6 +4681,15 @@ textarea.form-control-lg {
   padding: 1.25rem 1rem;
 }
 
+.alert-cher {
+  color: #410202;
+  background-color: #e2cdcd;
+  border-color: #d3b4b4;
+}
+.alert-cher .alert-link {
+  color: #340202;
+}
+
 .alert-start {
   color: #125804;
   background-color: #d5f8ce;
@@ -4962,6 +5045,20 @@ textarea.form-control-lg {
 }
 .list-group-flush > .list-group-item:last-child {
   border-bottom-width: 0;
+}
+
+.list-group-item-cher {
+  color: #410202;
+  background-color: #e2cdcd;
+}
+.list-group-item-cher.list-group-item-action:hover, .list-group-item-cher.list-group-item-action:focus {
+  color: #410202;
+  background-color: #cbb9b9;
+}
+.list-group-item-cher.list-group-item-action.active {
+  color: #fff;
+  background-color: #410202;
+  border-color: #410202;
 }
 
 .list-group-item-start {
@@ -6044,6 +6141,13 @@ textarea.form-control-lg {
   content: "";
 }
 
+.link-cher {
+  color: #6d0404;
+}
+.link-cher:hover, .link-cher:focus {
+  color: #570303;
+}
+
 .link-start {
   color: #2ddd0a;
 }
@@ -6466,6 +6570,10 @@ textarea.form-control-lg {
 
 .border-start-0 {
   border-left: 0 !important;
+}
+
+.border-cher {
+  border-color: #6d0404 !important;
 }
 
 .border-start {
@@ -7210,6 +7318,14 @@ textarea.form-control-lg {
   font-size: 1rem !important;
 }
 
+.fs-7 {
+  font-size: 0.75rem !important;
+}
+
+.fs-8 {
+  font-size: 0.5rem !important;
+}
+
 .fst-italic {
   font-style: italic !important;
 }
@@ -7305,6 +7421,10 @@ textarea.form-control-lg {
 }
 
 /* rtl:end:remove */
+.text-cher {
+  color: #6d0404 !important;
+}
+
 .text-start {
   color: #2ddd0a !important;
 }
@@ -7367,6 +7487,10 @@ textarea.form-control-lg {
 
 .text-reset {
   color: inherit !important;
+}
+
+.bg-cher {
+  background-color: #6d0404 !important;
 }
 
 .bg-start {
