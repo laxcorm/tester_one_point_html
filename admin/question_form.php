@@ -17,7 +17,6 @@ require_once('lock_guest.php');
 <input type="text" autocomplete="off" name="answer_' . $i . '" class="form-control" value="' . ($test["answer_$i"] ?? "") . '"></div>';
         }
         ?>
-
         <div class="row mt-3">
             <div class="col-1"></div>
             <?php if ($id <= $count) : ?>
@@ -29,7 +28,7 @@ require_once('lock_guest.php');
             <div class="col-2"></div>
             <button class="btn btn-success col-2" type="submit" name='id' value="<?php echo $id ?>">Save</button>
             <div class="col-2"></div>
-            
+
             <?php if ($id <= $count) : ?>
                 <a href="admin/delete.php?id=<?php echo $id ?>" class="btn btn-danger col-2" role="button">Delete</a>
             <?php endif ?>

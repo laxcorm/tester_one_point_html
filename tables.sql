@@ -1,3 +1,4 @@
+-- table for questions and answers
 CREATE TABLE tests(
     id TINYINT(2),
     questions VARCHAR(200),

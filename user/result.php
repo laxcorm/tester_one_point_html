@@ -6,7 +6,5 @@
     </div>
 </div>
 <?php
-$_SESSION = [];
-unset($_COOKIE[session_name()]);
-session_destroy();
+require_once(dirname(__DIR__) . '/session/destroy.php');
 die();

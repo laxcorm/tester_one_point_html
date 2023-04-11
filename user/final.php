@@ -15,6 +15,6 @@ $user_answers = $_SESSION['questions'];
 $user_answers = array_values($user_answers);
 $correct = array_intersect_assoc($user_answers, $real_answers);
 $correct_num = count($correct);
-$_SESSION['result']= "Правильних відповідей на $correct_num питань з $count";
+$_SESSION['result']= "Correct answers $correct_num for $count questions";
 unset($_SESSION['questions']);
 header("Location: http://" . $_SERVER['HTTP_HOST']);

@@ -6,7 +6,7 @@ if (isset($_POST['id'])) {
         $noanswer = true;
     } else {
         if (isset($_POST['answer'])) {
-            $_SESSION['questions'][abs($id)] = $_POST['answer']; //зачем прописать abs($id)
+            $_SESSION['questions'][abs($id)] = $_POST['answer'];
         }
       $id =  ($id == $count +1) ? $id : abs($id + 1);
       }

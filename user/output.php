@@ -1,5 +1,5 @@
 <div class="col-3"></div>
-<div class="col-6 border border-success">
+<div class="col-6">
     <div class="row mt-5">
         <div class="col-8"></div>
         <div class="col-2">Time left:</div>

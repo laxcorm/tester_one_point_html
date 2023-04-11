@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../db/mysql.php');
+require_once(dirname(__DIR__) . '/db/mysql.php');
 $post_password = $_POST['password'];
 $post_login = $_POST['login'];
 $query = "SELECT password FROM admin WHERE login = :login";

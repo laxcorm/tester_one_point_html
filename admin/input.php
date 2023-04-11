@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('lock_guest.php');
- require_once('../db/mysql.php');
+require_once(dirname(__DIR__) . '/db/mysql.php');
 $id = $_POST['id'];
 
 if(in_array('', $_POST)){
@@ -28,5 +28,4 @@ $stmt = $db->prepare($query);
 if (input($stmt) && $id > $_SESSION['count']) {
     $_SESSION['count'] = $id;
 }
-
 header("Location: http://" . $_SERVER['HTTP_HOST']);
